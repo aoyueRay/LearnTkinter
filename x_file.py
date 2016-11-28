@@ -293,6 +293,131 @@ class x_file(object):
         button_save = tk.Button(frame_operator,text='SAVE',command=save_datas)
         button_save.grid(row=0,column=0,padx=10,pady=10)
 
+    def history_frame(self):
+
+        frame_history = tk.LabelFrame(self.root,text='历史记录',padx=10,pady=10)
+        frame_history.grid(row=1,column=0)
+
+        tk.Label(frame_history,text='日  期').grid(row=0,column=0)
+        tk.Label(frame_history,text='舒张压').grid(row=0,column=1)
+        tk.Label(frame_history,text='收缩压').grid(row=0,column=2)
+        tk.Label(frame_history,text='脉  搏').grid(row=0,column=3)
+        tk.Label(frame_history,text='体  重').grid(row=0,column=4)
+
+        # 历史数据变量-日期
+        h_l_date_1,h_l_date_2,h_l_date_3 = tk.StringVar(),tk.StringVar(),tk.StringVar()
+        h_l_date_4,h_l_date_5,h_l_date_6 = tk.StringVar(),tk.StringVar(),tk.StringVar()
+        h_l_date_7,h_l_date_8 = tk.StringVar(),tk.StringVar()
+        h_l_date_9,h_l_date_10 = tk.StringVar(),tk.StringVar()
+
+        # 历史数据变量-舒张压
+        h_l_diastolic_1,h_l_diastolic_2,h_l_diastolic_3 = tk.StringVar(),tk.StringVar(),tk.StringVar()
+        h_l_diastolic_4,h_l_diastolic_5,h_l_diastolic_6 = tk.StringVar(),tk.StringVar(),tk.StringVar()
+        h_l_diastolic_7,h_l_diastolic_8 = tk.StringVar(),tk.StringVar()
+        h_l_diastolic_9,h_l_diastolic_10 = tk.StringVar(),tk.StringVar()
+
+        # 历史数据变量-收缩压
+        h_l_systolic_1,h_l_systolic_2,h_l_systolic_3 = tk.StringVar(),tk.StringVar(),tk.StringVar()
+        h_l_systolic_4,h_l_systolic_5,h_l_systolic_6 = tk.StringVar(),tk.StringVar(),tk.StringVar()
+        h_l_systolic_7,h_l_systolic_8 = tk.StringVar(),tk.StringVar()
+        h_l_systolic_9,h_l_systolic_10 = tk.StringVar(),tk.StringVar()
+
+        # 历史数据变量-脉搏
+        h_l_pulse_1,h_l_pulse_2,h_l_pulse_3 = tk.StringVar(),tk.StringVar(),tk.StringVar()
+        h_l_pulse_4,h_l_pulse_5,h_l_pulse_6 = tk.StringVar(),tk.StringVar(),tk.StringVar()
+        h_l_pulse_7,h_l_pulse_8 = tk.StringVar(),tk.StringVar()
+        h_l_pulse_9,h_l_pulse_10 = tk.StringVar(),tk.StringVar()
+
+        # 历史数据变量-体重
+        h_l_weight_1,h_l_weight_2,h_l_weight_3 = tk.StringVar(),tk.StringVar(),tk.StringVar()
+        h_l_weight_4,h_l_weight_5,h_l_weight_6 = tk.StringVar(),tk.StringVar(),tk.StringVar()
+        h_l_weight_7,h_l_weight_8 = tk.StringVar(),tk.StringVar()
+        h_l_weight_9,h_l_weight_10 = tk.StringVar(),tk.StringVar()
+
+        # 历史记录-日期
+        tk.Label(frame_history,textvariable=h_l_date_1).grid(row=1,column=0)
+        tk.Label(frame_history,textvariable=h_l_date_2).grid(row=2,column=0)
+        tk.Label(frame_history,textvariable=h_l_date_3).grid(row=3,column=0)
+        tk.Label(frame_history,textvariable=h_l_date_4).grid(row=4,column=0)
+        tk.Label(frame_history,textvariable=h_l_date_5).grid(row=5,column=0)
+        tk.Label(frame_history,textvariable=h_l_date_6).grid(row=6,column=0)
+        tk.Label(frame_history,textvariable=h_l_date_7).grid(row=7,column=0)
+        tk.Label(frame_history,textvariable=h_l_date_8).grid(row=8,column=0)
+        tk.Label(frame_history,textvariable=h_l_date_9).grid(row=9,column=0)
+        tk.Label(frame_history,textvariable=h_l_date_10).grid(row=10,column=0)
+
+        # 历史记录-舒张压
+        tk.Label(frame_history, textvariable=h_l_diastolic_1).grid(row=1, column=1)
+        tk.Label(frame_history, textvariable=h_l_diastolic_2).grid(row=2, column=1)
+        tk.Label(frame_history, textvariable=h_l_diastolic_3).grid(row=3, column=1)
+        tk.Label(frame_history, textvariable=h_l_diastolic_4).grid(row=4, column=1)
+        tk.Label(frame_history, textvariable=h_l_diastolic_5).grid(row=5, column=1)
+        tk.Label(frame_history, textvariable=h_l_diastolic_6).grid(row=6, column=1)
+        tk.Label(frame_history, textvariable=h_l_diastolic_7).grid(row=7, column=1)
+        tk.Label(frame_history, textvariable=h_l_diastolic_8).grid(row=8, column=1)
+        tk.Label(frame_history, textvariable=h_l_diastolic_9).grid(row=9, column=1)
+        tk.Label(frame_history, textvariable=h_l_diastolic_10).grid(row=10, column=1)
+
+        # 历史记录-收缩压
+        tk.Label(frame_history, textvariable=h_l_systolic_1).grid(row=1, column=2)
+        tk.Label(frame_history, textvariable=h_l_systolic_2).grid(row=2, column=2)
+        tk.Label(frame_history, textvariable=h_l_systolic_3).grid(row=3, column=2)
+        tk.Label(frame_history, textvariable=h_l_systolic_4).grid(row=4, column=2)
+        tk.Label(frame_history, textvariable=h_l_systolic_5).grid(row=5, column=2)
+        tk.Label(frame_history, textvariable=h_l_systolic_6).grid(row=6, column=2)
+        tk.Label(frame_history, textvariable=h_l_systolic_7).grid(row=7, column=2)
+        tk.Label(frame_history, textvariable=h_l_systolic_8).grid(row=8, column=2)
+        tk.Label(frame_history, textvariable=h_l_systolic_9).grid(row=9, column=2)
+        tk.Label(frame_history, textvariable=h_l_systolic_10).grid(row=10, column=2)
+
+        # 历史记录-脉搏
+        tk.Label(frame_history, textvariable=h_l_pulse_1).grid(row=1, column=3)
+        tk.Label(frame_history, textvariable=h_l_pulse_2).grid(row=2, column=3)
+        tk.Label(frame_history, textvariable=h_l_pulse_3).grid(row=3, column=3)
+        tk.Label(frame_history, textvariable=h_l_pulse_4).grid(row=4, column=3)
+        tk.Label(frame_history, textvariable=h_l_pulse_5).grid(row=5, column=3)
+        tk.Label(frame_history, textvariable=h_l_pulse_6).grid(row=6, column=3)
+        tk.Label(frame_history, textvariable=h_l_pulse_7).grid(row=7, column=3)
+        tk.Label(frame_history, textvariable=h_l_pulse_8).grid(row=8, column=3)
+        tk.Label(frame_history, textvariable=h_l_pulse_9).grid(row=9, column=3)
+        tk.Label(frame_history, textvariable=h_l_pulse_10).grid(row=10, column=3)
+
+        # 历史记录-体重
+        tk.Label(frame_history, textvariable=h_l_weight_1).grid(row=1, column=4)
+        tk.Label(frame_history, textvariable=h_l_weight_2).grid(row=2, column=4)
+        tk.Label(frame_history, textvariable=h_l_weight_3).grid(row=3, column=4)
+        tk.Label(frame_history, textvariable=h_l_weight_4).grid(row=4, column=4)
+        tk.Label(frame_history, textvariable=h_l_weight_5).grid(row=5, column=4)
+        tk.Label(frame_history, textvariable=h_l_weight_6).grid(row=6, column=4)
+        tk.Label(frame_history, textvariable=h_l_weight_7).grid(row=7, column=4)
+        tk.Label(frame_history, textvariable=h_l_weight_8).grid(row=8, column=4)
+        tk.Label(frame_history, textvariable=h_l_weight_9).grid(row=9, column=4)
+        tk.Label(frame_history, textvariable=h_l_weight_10).grid(row=10, column=4)
+
+        self.query_record()
+
+    def query_record(self):
+
+        sql = 'select * from my_health_data'
+        count = 0    # 初始化计数器
+        try:
+            count = self.cur.execute(sql)
+            self.conn.commit()
+            results = self.cur.fetchall()
+            for each in results:
+                print each[0]
+        except MySQLdb.Error as err:
+            print('查询记录的时候出错了。。。')
+            print('Error %s ' % err.args[0])
+
+        if count == 0:
+            print('什么都没有找到。。。')
+        else:
+            print('找到%d条记录。。。' % count)
+        return None
+
+
+
 
 if __name__ == '__main__':
     xfile = x_file()
@@ -300,5 +425,6 @@ if __name__ == '__main__':
     xfile.date_time_frame()    # 日期
     xfile.weight_frame()    # 体重
     xfile.operator_frame()    # 操作区
+    xfile.history_frame()    # 历史记录
     xfile.root.mainloop()
     xfile.closeDB()
