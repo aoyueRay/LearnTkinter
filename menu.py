@@ -46,19 +46,19 @@ main_menu.add_cascade(label='Button',menu=button_menu)
 
 
 
-frame = tk.Frame(root,width=512,height=512)
-frame.pack()
+# frame = tk.Frame(root,width=512,height=512)
+# frame.pack()
 
 def popup(event):
     # 将菜单弹出
     main_menu.post(event.x,event.y)
 
-# 绑定鼠标右键
-frame.bind('<Button-3>',popup)
+# # 绑定鼠标右键
+# frame.bind('<Button-3>',popup)
 
 
 # 显示菜单
-# root.config(menu=main_menu)
+root.config(menu=main_menu)
 
 
 root.mainloop()
