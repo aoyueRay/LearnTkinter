@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/learnTkinter.iml" filepath="$PROJECT_DIR$/.idea/learnTkinter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../practice/.idea/practice.iml" filepath="$PROJECT_DIR$/../practice/.idea/practice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../zzz/.idea/temp.iml" filepath="$PROJECT_DIR$/../zzz/.idea/temp.iml" />
       <module fileurl="file://$PROJECT_DIR$/../test/.idea/test.iml" filepath="$PROJECT_DIR$/../test/.idea/test.iml" />
     </modules>
   </component>
