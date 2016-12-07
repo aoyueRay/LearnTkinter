@@ -228,15 +228,20 @@ class x_file(object):
         :return:
         """
 
-        date = tk.StringVar()
+        current_time = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
 
-        frame_date = tk.LabelFrame(self.root,text='日期',padx=10,pady=10)
+        frame_date = tk.LabelFrame(self.root,text='Time',padx=10,pady=10)
         frame_date.grid(row=0,column=2,padx=10,pady=10)
-        tk.Label(frame_date,textvariable=date).grid(row=0,column=0)
+        time_label = tk.Label(frame_date,text=current_time)
+        time_label.grid(row=0,column=0)
 
-        current_time = time.localtime(time.time())
-        self.date_str = time.strftime('%Y-%m-%d', current_time)
-        date.set(self.date_str)
+        def update_time():
+            current_time = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
+            time_label.config(text=current_time)
+            frame_date.update()
+            time_label.after(1000,update_time)
+
+        time_label.after(1000,update_time)
 
     def operator_frame(self):
 
